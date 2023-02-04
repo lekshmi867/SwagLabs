@@ -2,6 +2,7 @@ package com.lekshmi.swaglabs.Tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.swaglabs.Base.TestBase;
@@ -13,8 +14,9 @@ public class SwagLabTest extends TestBase {
 	ProductPage productPage;
 
 	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@Parameters({"browser"})
+	public void setUp(String browser) {
+		launchBrowser(browser);
 		swagLabPage = new SwagLabPage(driver, true).get();
 	}
 

@@ -3,8 +3,10 @@ package com.lekshmi.swaglabs.Tests;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
 import com.swaglabs.Base.TestBase;
 import com.swaglabs.Pages.CartPage;
 import com.swaglabs.Pages.CheckoutPage;
@@ -20,8 +22,9 @@ public class CompleteTest extends TestBase {
 	CompletePage completePage;
 	
 	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@Parameters({"browser"})
+	public void setUp(String browser) {
+		launchBrowser(browser);
 		swagLabPage = new SwagLabPage(driver,true).get();
 		}
 	

@@ -13,19 +13,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	public static WebDriver driver;
-	public static Browsers Default_Browser =Browsers.GOOGLE_CHROME;
+//	public static Browsers Default_Browser =Browsers.GOOGLE_CHROME;
+	public static Browsers Default_Browser =null;
 	public static WebdriverEvents events=new WebdriverEvents();
 	public EventFiringWebDriver eventFiringWebDriver; 
 	
-	public void launchBrowser() {
-		switch(Default_Browser) {
-		case GOOGLE_CHROME:
+	public void launchBrowser(String browser) {
+		switch(browser) {
+		case "Chrome":
 			driver=new ProxyDriver(WebDriverManager.chromedriver().create());
 			break;
-		case EDGE:
+		case "Edge":
 			driver=new ProxyDriver(WebDriverManager.edgedriver().create());
 			break;
-		case FIREFOX:
+		case "Firefox":
 			driver=new ProxyDriver(WebDriverManager.firefoxdriver().create());
 			break;
 		
