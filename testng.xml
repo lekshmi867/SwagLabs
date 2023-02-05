@@ -6,7 +6,6 @@
 		<listener class-name="com.swaglabs.Listeners.CustomListener" />
 		<listener class-name="com.swaglabs.Reports.ExtentReportListener" />
 		<listener class-name="com.swaglabs.Utils.TransformerForRetry" />
-		<listener class-name="com.swaglabs.Listeners.ParameterReaderListener" />
 
 	</listeners>
 	<test thread-count="5" name="Test">

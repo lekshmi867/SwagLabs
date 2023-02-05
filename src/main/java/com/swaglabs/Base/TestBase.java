@@ -14,7 +14,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 	public static WebDriver driver;
 //	public static Browsers Default_Browser =Browsers.GOOGLE_CHROME;
-	public static Browsers Default_Browser =null;
 	public static WebdriverEvents events=new WebdriverEvents();
 	public EventFiringWebDriver eventFiringWebDriver; 
 	
